@@ -8,42 +8,27 @@ using System.Threading.Tasks;
 
 namespace Funeraria
 {
-    public class Heroe : Persona, ILogro<string>
+    public class Heroe : Persona, ILogro
     {
-        string logro;
         public Heroe(string nombre, int edad, string dni) : base(nombre, edad, dni)
         {
 
         }
 
-        public string Logro
-        {
-            get { return logro; }
-            set { logro = AgregarLogro(value); }
-        }
+        public string Logro { get; set; }
 
-
-        public string AgregarLogro(string logro) 
+        public string MostrarLogros()
         {
-            List<string> lista = new List<string>();
-            lista.Add(logro);
-            return logro;
+            StringBuilder sb = new StringBuilder();
+            base.MostrarPersona();
+            sb.AppendLine("Logro: " + this.dni);
+
+            return sb.ToString();
         }
 
         public override string MostrarPersona()
         {
-            return base.ToString() + MostrarLogro();      
-        }
-
-        public string MostrarLogro()
-        {
-            StringBuilder sb = new StringBuilder();
-            foreach (var item in this.Logro)
-            {
-                sb.AppendLine(logro);
-            }
-
-            return sb.ToString();
+            return MostrarLogros();
         }
 
     }

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Funeraria;
 using Entidades;
+using Entidades.Archivos;
 
 namespace Formularios
 {
@@ -32,7 +33,7 @@ namespace Formularios
         private void FormAlta_FormClosed(object sender, FormClosedEventArgs e)
         {
             this.DialogResult = DialogResult.OK;
-            Cementerio.GuardarDatos(cementerio.Personas);
+            MisArchivos<Persona>.GuardarDatos(cementerio.Personas);
         }
 
         private void btnAlta_Click(object sender, EventArgs e)
@@ -47,7 +48,7 @@ namespace Formularios
                     if(rdbSi.Checked == true)
                     {
                         heroe = new Heroe(txtNombre.Text, edadPersona, txtDNI.Text);
-                        heroe.AgregarLogro(txtLogro.Text);
+                        heroe.Logro =  txtLogro.Text;
                         cementerio = this.cementerio + heroe;
 
                     }
@@ -73,7 +74,7 @@ namespace Formularios
         private void FormAlta_Load(object sender, EventArgs e)
         {
             rdbNo.Checked = true;
-            cementerio.Personas.AddRange(Cementerio.CargarDatos());
+            cementerio.Personas.AddRange(MisArchivos<Persona>.CargarDatos());
 
         }
 

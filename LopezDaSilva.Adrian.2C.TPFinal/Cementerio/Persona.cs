@@ -37,8 +37,8 @@ namespace Funeraria
         {
             StringBuilder sb = new StringBuilder();
             sb.AppendLine("Nombre: " + this.nombre);
-            sb.AppendLine("Edad: " + this.edad.ToString());
-            sb.AppendLine("DNI: " + this.dni);
+            sb.AppendLine(" Edad: " + this.edad.ToString());
+            sb.AppendLine(" DNI: " + this.dni);
 
             return sb.ToString();
         }

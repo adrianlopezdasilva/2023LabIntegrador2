@@ -1,4 +1,5 @@
 ﻿using Entidades;
+using Entidades.Archivos;
 using Funeraria;
 
 namespace Formularios
@@ -10,6 +11,8 @@ namespace Formularios
         {
             InitializeComponent();
             this.cementerio = new Cementerio();
+            cementerio.Personas.AddRange(MisArchivos<Persona>.CargarDatos());
+
         }
 
         private void btnAgregarPersona_Click(object sender, EventArgs e)
@@ -35,25 +38,29 @@ namespace Formularios
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
             Refrescar();
-
         }
 
         private void Refrescar()
         {
             this.lstPersonas.DataSource = null;
             this.lstPersonas.Text = string.Empty;
-            cementerio.Personas.AddRange(Cementerio.CargarDatos());
             this.lstPersonas.DataSource = cementerio.Personas;
+
 
         }
 
+        /// <summary>
+        /// Busca a una Persona por DNI y muestra sus datos
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void btnBuscar_Click(object sender, EventArgs e)
         {
             foreach (var item in cementerio.Personas)
             {
                 if (txtBuscarDNI.Text == item.Dni )
                 {
-                    MessageBox.Show(item.ToString(), "Persona");
+                    MessageBox.Show(item.MostrarPersona(), "Persona");
                 }
 
             }

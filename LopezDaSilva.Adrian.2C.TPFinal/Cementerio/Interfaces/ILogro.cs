@@ -6,12 +6,9 @@ using System.Threading.Tasks;
 
 namespace Entidades.Interfaces
 {
-    public interface ILogro <T>
+    public interface ILogro
     {
-        
-        public string AgregarLogro(T logro);
-        public string MostrarLogro();
-
+        string MostrarLogros();
 
     }
 }
