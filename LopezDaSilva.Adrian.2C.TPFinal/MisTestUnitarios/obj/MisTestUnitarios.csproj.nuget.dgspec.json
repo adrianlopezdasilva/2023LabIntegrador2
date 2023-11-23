@@ -1,0 +1,140 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Documents\\Facultad\\Programacion2023C2\\2023LabIntegrador2\\LopezDaSilva.Adrian.2C.TPFinal\\MisTestUnitarios\\MisTestUnitarios.csproj": {}
+  },
+  "projects": {
+    "C:\\Documents\\Facultad\\Programacion2023C2\\2023LabIntegrador2\\LopezDaSilva.Adrian.2C.TPFinal\\Cementerio\\Entidades.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Documents\\Facultad\\Programacion2023C2\\2023LabIntegrador2\\LopezDaSilva.Adrian.2C.TPFinal\\Cementerio\\Entidades.csproj",
+        "projectName": "Entidades",
+        "projectPath": "C:\\Documents\\Facultad\\Programacion2023C2\\2023LabIntegrador2\\LopezDaSilva.Adrian.2C.TPFinal\\Cementerio\\Entidades.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Documents\\Facultad\\Programacion2023C2\\2023LabIntegrador2\\LopezDaSilva.Adrian.2C.TPFinal\\Cementerio\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Documents\\Facultad\\Programacion2023C2\\2023LabIntegrador2\\LopezDaSilva.Adrian.2C.TPFinal\\MisTestUnitarios\\MisTestUnitarios.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Documents\\Facultad\\Programacion2023C2\\2023LabIntegrador2\\LopezDaSilva.Adrian.2C.TPFinal\\MisTestUnitarios\\MisTestUnitarios.csproj",
+        "projectName": "MisTestUnitarios",
+        "projectPath": "C:\\Documents\\Facultad\\Programacion2023C2\\2023LabIntegrador2\\LopezDaSilva.Adrian.2C.TPFinal\\MisTestUnitarios\\MisTestUnitarios.csproj",
+        "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
+        "outputPath": "C:\\Documents\\Facultad\\Programacion2023C2\\2023LabIntegrador2\\LopezDaSilva.Adrian.2C.TPFinal\\MisTestUnitarios\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\Documents\\Facultad\\Programacion2023C2\\2023LabIntegrador2\\LopezDaSilva.Adrian.2C.TPFinal\\Cementerio\\Entidades.csproj": {
+                "projectPath": "C:\\Documents\\Facultad\\Programacion2023C2\\2023LabIntegrador2\\LopezDaSilva.Adrian.2C.TPFinal\\Cementerio\\Entidades.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "MSTest.TestAdapter": {
+              "target": "Package",
+              "version": "[2.2.10, )"
+            },
+            "MSTest.TestFramework": {
+              "target": "Package",
+              "version": "[2.2.10, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.5.0, )"
+            },
+            "coverlet.collector": {
+              "target": "Package",
+              "version": "[3.2.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
