@@ -8,29 +8,39 @@ using System.Threading.Tasks;
 
 namespace Funeraria
 {
-    public class Heroe : Persona, ITesoro<string>
+    public class Heroe : Persona, ILogro<string>
     {
-        string tesoro;
+        string logro;
         public Heroe(string nombre, int edad, string dni) : base(nombre, edad, dni)
         {
+
         }
 
-        public string Tesoro { get; set; }
-
-
-        public void AgregarTesoro(string tesoro) 
+        public string Logro
         {
-            List<string> lista = new List<string>
-            {
-                tesoro
-            };
+            get { return logro; }
+            set { logro = AgregarLogro(value); }
         }
-        public string MostrarTesoro(string tesoro)
+
+
+        public string AgregarLogro(string logro) 
+        {
+            List<string> lista = new List<string>();
+            lista.Add(logro);
+            return logro;
+        }
+
+        public override string MostrarPersona()
+        {
+            return base.ToString() + MostrarLogro();      
+        }
+
+        public string MostrarLogro()
         {
             StringBuilder sb = new StringBuilder();
-            foreach (var item in tesoro)
+            foreach (var item in this.Logro)
             {
-                sb.AppendLine(tesoro);
+                sb.AppendLine(logro);
             }
 
             return sb.ToString();

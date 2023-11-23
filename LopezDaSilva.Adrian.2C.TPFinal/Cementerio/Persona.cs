@@ -6,9 +6,9 @@ namespace Funeraria
 {
     public class Persona
     {
-        private string nombre;
-        private int edad;
-        private string dni;
+        protected string nombre;
+        protected int edad;
+        protected string dni;
 
         public string Nombre
         {
@@ -36,11 +36,9 @@ namespace Funeraria
         public virtual string MostrarPersona()
         {
             StringBuilder sb = new StringBuilder();
-            sb.AppendLine(this.nombre);
-            sb.AppendLine("");
-            sb.AppendLine(this.edad.ToString());
-            sb.AppendLine("");          
-            sb.AppendLine(this.dni);
+            sb.AppendLine("Nombre: " + this.nombre);
+            sb.AppendLine("Edad: " + this.edad.ToString());
+            sb.AppendLine("DNI: " + this.dni);
 
             return sb.ToString();
         }

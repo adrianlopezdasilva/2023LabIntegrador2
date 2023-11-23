@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormPrincipal));
             lstPersonas = new ListBox();
             btnAgregarPersona = new Button();
+            btnBuscar = new Button();
+            txtBuscarDNI = new TextBox();
             SuspendLayout();
             // 
             // lstPersonas
@@ -45,7 +47,7 @@
             // btnAgregarPersona
             // 
             btnAgregarPersona.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
-            btnAgregarPersona.Location = new Point(784, 280);
+            btnAgregarPersona.Location = new Point(312, 679);
             btnAgregarPersona.Name = "btnAgregarPersona";
             btnAgregarPersona.Size = new Size(281, 57);
             btnAgregarPersona.TabIndex = 1;
@@ -53,12 +55,33 @@
             btnAgregarPersona.UseVisualStyleBackColor = true;
             btnAgregarPersona.Click += btnAgregarPersona_Click;
             // 
+            // btnBuscar
+            // 
+            btnBuscar.Font = new Font("Segoe UI", 20F, FontStyle.Regular, GraphicsUnit.Point);
+            btnBuscar.Location = new Point(12, 679);
+            btnBuscar.Name = "btnBuscar";
+            btnBuscar.Size = new Size(281, 57);
+            btnBuscar.TabIndex = 2;
+            btnBuscar.Text = "Buscar";
+            btnBuscar.UseVisualStyleBackColor = true;
+            btnBuscar.Click += btnBuscar_Click;
+            // 
+            // txtBuscarDNI
+            // 
+            txtBuscarDNI.Location = new Point(12, 650);
+            txtBuscarDNI.Name = "txtBuscarDNI";
+            txtBuscarDNI.PlaceholderText = "Ingrese un DNI";
+            txtBuscarDNI.Size = new Size(281, 23);
+            txtBuscarDNI.TabIndex = 3;
+            // 
             // FormPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
-            ClientSize = new Size(1167, 748);
+            ClientSize = new Size(663, 748);
+            Controls.Add(txtBuscarDNI);
+            Controls.Add(btnBuscar);
             Controls.Add(btnAgregarPersona);
             Controls.Add(lstPersonas);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -70,11 +93,14 @@
             FormClosing += FormPrincipal_FormClosing;
             Load += FormPrincipal_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private ListBox lstPersonas;
         private Button btnAgregarPersona;
+        private Button btnBuscar;
+        private TextBox txtBuscarDNI;
     }
 }

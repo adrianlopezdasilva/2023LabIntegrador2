@@ -41,10 +41,23 @@ namespace Formularios
         private void Refrescar()
         {
             this.lstPersonas.DataSource = null;
+            this.lstPersonas.Text = string.Empty;
             cementerio.Personas.AddRange(Cementerio.CargarDatos());
             this.lstPersonas.DataSource = cementerio.Personas;
 
         }
 
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            foreach (var item in cementerio.Personas)
+            {
+                if (txtBuscarDNI.Text == item.Dni )
+                {
+                    MessageBox.Show(item.ToString(), "Persona");
+                }
+
+            }
+
+        }
     }
 }

@@ -52,11 +52,6 @@ namespace Entidades
             return cementerio;
         }
 
-    
-
-          
-
-
         /// <summary>
         /// Guarda la lista de personas en un archivo json
         /// </summary>
@@ -68,12 +63,11 @@ namespace Entidades
 
             JsonSerializerOptions options = new JsonSerializerOptions();
             options.WriteIndented = true;
-
-            
+         
             using (StreamWriter sw = new StreamWriter(rutaCompleta))
             {
                 string personasJson = JsonSerializer.Serialize(personas, options);
-                 sw.WriteLine(personasJson);
+                sw.WriteLine(personasJson);
             }
             
         }

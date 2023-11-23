@@ -41,19 +41,26 @@ namespace Formularios
             {
                 try
                 {
-                    Persona auxPersona = new Persona(txtNombre.Text, edadPersona, txtDNI.Text);
+                    Persona auxPersona;
+                    Heroe heroe;
 
-                    if (cmbRol.SelectedIndex == 1)
+                    if(rdbSi.Checked == true)
                     {
-                        txtLogro.Enabled = true;
+                        heroe = new Heroe(txtNombre.Text, edadPersona, txtDNI.Text);
+                        heroe.AgregarLogro(txtLogro.Text);
+                        cementerio = this.cementerio + heroe;
+
                     }
-                    cementerio = this.cementerio + auxPersona;
+                    else
+                    {
+                        auxPersona = new Persona(txtNombre.Text, edadPersona, txtDNI.Text);
+                        cementerio = this.cementerio + auxPersona;
+                    }
+
+                    //cementerio = this.cementerio + auxPersona;
 
                     MessageBox.Show("Alta dada con exito", "Exito");
-
-                    this.txtNombre.Text = "";
-                    this.txtEdad.Text = "";
-                    this.txtDNI.Text = "";
+                    this.Limpiar();
 
                 }
                 catch (Exception ex)
@@ -65,8 +72,31 @@ namespace Formularios
 
         private void FormAlta_Load(object sender, EventArgs e)
         {
-            txtLogro.Enabled = false;
+            rdbNo.Checked = true;
+            cementerio.Personas.AddRange(Cementerio.CargarDatos());
 
+        }
+
+        private void rdbSi_CheckedChanged(object sender, EventArgs e)
+        {
+            txtLogro.Enabled = true;
+            txtLogro.Visible = true;
+        }
+
+        private void rdbNo_CheckedChanged(object sender, EventArgs e)
+        {
+            txtLogro.Enabled = false;
+            txtLogro.Visible = false;
+        }
+
+        /// <summary>
+        /// Borra los datos de los textboxs
+        /// </summary>
+        private void Limpiar()
+        {
+            this.txtNombre.Text = "";
+            this.txtEdad.Text = "";
+            this.txtDNI.Text = "";
         }
     }
 }

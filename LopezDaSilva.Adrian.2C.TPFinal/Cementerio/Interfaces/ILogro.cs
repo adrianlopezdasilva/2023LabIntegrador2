@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace Entidades.Interfaces
 {
-    public interface ITesoro <T>
+    public interface ILogro <T>
     {
-        public void AgregarTesoro(T tesoro);
-        public string MostrarTesoro(T tesoro);
+        
+        public string AgregarLogro(T logro);
+        public string MostrarLogro();
 
 
     }

@@ -33,9 +33,10 @@
             txtEdad = new TextBox();
             btnAlta = new Button();
             txtDNI = new TextBox();
-            cmbRol = new ComboBox();
             lblRol = new Label();
             txtLogro = new TextBox();
+            rdbSi = new RadioButton();
+            rdbNo = new RadioButton();
             SuspendLayout();
             // 
             // txtNombre
@@ -73,22 +74,12 @@
             txtDNI.Size = new Size(311, 23);
             txtDNI.TabIndex = 2;
             // 
-            // cmbRol
-            // 
-            cmbRol.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbRol.FormattingEnabled = true;
-            cmbRol.Items.AddRange(new object[] { "No,", "Si" });
-            cmbRol.Location = new Point(422, 159);
-            cmbRol.Name = "cmbRol";
-            cmbRol.Size = new Size(121, 23);
-            cmbRol.TabIndex = 4;
-            // 
             // lblRol
             // 
             lblRol.AutoSize = true;
             lblRol.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
             lblRol.ForeColor = SystemColors.MenuHighlight;
-            lblRol.Location = new Point(422, 110);
+            lblRol.Location = new Point(422, 134);
             lblRol.Name = "lblRol";
             lblRol.Size = new Size(121, 28);
             lblRol.TabIndex = 5;
@@ -96,21 +87,46 @@
             // 
             // txtLogro
             // 
-            txtLogro.Location = new Point(422, 200);
+            txtLogro.Location = new Point(422, 236);
             txtLogro.Name = "txtLogro";
             txtLogro.PlaceholderText = "Ingrese un logro";
             txtLogro.Size = new Size(121, 23);
             txtLogro.TabIndex = 6;
             // 
+            // rdbSi
+            // 
+            rdbSi.AutoSize = true;
+            rdbSi.Location = new Point(509, 185);
+            rdbSi.Name = "rdbSi";
+            rdbSi.Size = new Size(34, 19);
+            rdbSi.TabIndex = 7;
+            rdbSi.TabStop = true;
+            rdbSi.Text = "Si";
+            rdbSi.UseVisualStyleBackColor = true;
+            rdbSi.CheckedChanged += rdbSi_CheckedChanged;
+            // 
+            // rdbNo
+            // 
+            rdbNo.AutoSize = true;
+            rdbNo.Location = new Point(422, 185);
+            rdbNo.Name = "rdbNo";
+            rdbNo.Size = new Size(41, 19);
+            rdbNo.TabIndex = 8;
+            rdbNo.TabStop = true;
+            rdbNo.Text = "No";
+            rdbNo.UseVisualStyleBackColor = true;
+            rdbNo.CheckedChanged += rdbNo_CheckedChanged;
+            // 
             // FormAlta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.ActiveCaptionText;
+            BackColor = SystemColors.ControlLight;
             ClientSize = new Size(700, 546);
+            Controls.Add(rdbNo);
+            Controls.Add(rdbSi);
             Controls.Add(txtLogro);
             Controls.Add(lblRol);
-            Controls.Add(cmbRol);
             Controls.Add(txtDNI);
             Controls.Add(btnAlta);
             Controls.Add(txtEdad);
@@ -134,8 +150,9 @@
         private TextBox txtEdad;
         private Button btnAlta;
         private TextBox txtDNI;
-        private ComboBox cmbRol;
         private Label lblRol;
         private TextBox txtLogro;
+        private RadioButton rdbSi;
+        private RadioButton rdbNo;
     }
 }
