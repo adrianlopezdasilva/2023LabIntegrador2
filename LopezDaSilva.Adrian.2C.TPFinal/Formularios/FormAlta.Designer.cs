@@ -33,6 +33,9 @@
             txtEdad = new TextBox();
             btnAlta = new Button();
             txtDNI = new TextBox();
+            cmbRol = new ComboBox();
+            lblRol = new Label();
+            txtLogro = new TextBox();
             SuspendLayout();
             // 
             // txtNombre
@@ -54,10 +57,10 @@
             // btnAlta
             // 
             btnAlta.Font = new Font("Segoe UI", 30F, FontStyle.Regular, GraphicsUnit.Point);
-            btnAlta.Location = new Point(41, 289);
+            btnAlta.Location = new Point(41, 329);
             btnAlta.Name = "btnAlta";
             btnAlta.Size = new Size(311, 114);
-            btnAlta.TabIndex = 2;
+            btnAlta.TabIndex = 3;
             btnAlta.Text = "Alta";
             btnAlta.UseVisualStyleBackColor = true;
             btnAlta.Click += btnAlta_Click;
@@ -68,14 +71,46 @@
             txtDNI.Name = "txtDNI";
             txtDNI.PlaceholderText = "Ingrese un DNI";
             txtDNI.Size = new Size(311, 23);
-            txtDNI.TabIndex = 3;
+            txtDNI.TabIndex = 2;
+            // 
+            // cmbRol
+            // 
+            cmbRol.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbRol.FormattingEnabled = true;
+            cmbRol.Items.AddRange(new object[] { "No,", "Si" });
+            cmbRol.Location = new Point(422, 159);
+            cmbRol.Name = "cmbRol";
+            cmbRol.Size = new Size(121, 23);
+            cmbRol.TabIndex = 4;
+            // 
+            // lblRol
+            // 
+            lblRol.AutoSize = true;
+            lblRol.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+            lblRol.ForeColor = SystemColors.MenuHighlight;
+            lblRol.Location = new Point(422, 110);
+            lblRol.Name = "lblRol";
+            lblRol.Size = new Size(121, 28);
+            lblRol.TabIndex = 5;
+            lblRol.Text = "Es un heroe?";
+            // 
+            // txtLogro
+            // 
+            txtLogro.Location = new Point(422, 200);
+            txtLogro.Name = "txtLogro";
+            txtLogro.PlaceholderText = "Ingrese un logro";
+            txtLogro.Size = new Size(121, 23);
+            txtLogro.TabIndex = 6;
             // 
             // FormAlta
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaptionText;
-            ClientSize = new Size(944, 546);
+            ClientSize = new Size(700, 546);
+            Controls.Add(txtLogro);
+            Controls.Add(lblRol);
+            Controls.Add(cmbRol);
             Controls.Add(txtDNI);
             Controls.Add(btnAlta);
             Controls.Add(txtEdad);
@@ -88,6 +123,7 @@
             Text = "Alta";
             FormClosing += FormAlta_FormClosing;
             FormClosed += FormAlta_FormClosed;
+            Load += FormAlta_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -98,5 +134,8 @@
         private TextBox txtEdad;
         private Button btnAlta;
         private TextBox txtDNI;
+        private ComboBox cmbRol;
+        private Label lblRol;
+        private TextBox txtLogro;
     }
 }

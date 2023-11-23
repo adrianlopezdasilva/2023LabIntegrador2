@@ -36,12 +36,17 @@ namespace Formularios
         }
 
         private void btnAlta_Click(object sender, EventArgs e)
-        {  
+        {
             if (int.TryParse(txtEdad.Text, out int edadPersona))
-             {
-                 try
-                 {
+            {
+                try
+                {
                     Persona auxPersona = new Persona(txtNombre.Text, edadPersona, txtDNI.Text);
+
+                    if (cmbRol.SelectedIndex == 1)
+                    {
+                        txtLogro.Enabled = true;
+                    }
                     cementerio = this.cementerio + auxPersona;
 
                     MessageBox.Show("Alta dada con exito", "Exito");
@@ -52,10 +57,16 @@ namespace Formularios
 
                 }
                 catch (Exception ex)
-                 {
-                     MessageBox.Show(ex.Message, "Error");
-                 }
+                {
+                    MessageBox.Show(ex.Message, "Error");
                 }
-             }
+            }
+        }
+
+        private void FormAlta_Load(object sender, EventArgs e)
+        {
+            txtLogro.Enabled = false;
+
+        }
     }
 }
